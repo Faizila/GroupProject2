@@ -31,4 +31,6 @@ Exercises.init(
         freezeTableName: true,
         modelName: 'exercises',
     }
-)
+);
+
+module.exports = Exercises;

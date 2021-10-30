@@ -43,5 +43,6 @@ Login.init(
         sequelize,
         model: 'login'
     }
+);
 
-    )
+module.exports = Login;

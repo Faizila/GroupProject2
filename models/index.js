@@ -1,6 +1,6 @@
 const Login = require('./Login');
 const Exercises = require('./Exercises');
-const UserExercises = require('./User_exercises');
+const UserExercises = require('./UserExercises');
 
 Login.hasMany(UserExercises, {
   foreignKey: 'login_email',

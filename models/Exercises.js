@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('..config/connection');
+const sequelize = require('../config/connection');
 
 class Exercises extends Model {}
 
@@ -9,7 +9,7 @@ Exercises.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoincrement: true
+            autoIncrement: true,
         },
         exercise_name: {
             type: DataTypes.STRING,
@@ -18,12 +18,10 @@ Exercises.init(
         img_start: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
         },
         img_end: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
         }
     },
     {

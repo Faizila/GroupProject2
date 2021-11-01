@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('..config/connection');
+const sequelize = require('../config/connection');
 
 class UserExercises extends Model {}
 
@@ -7,8 +7,8 @@ UserExercises.init(
     {
         id: {
             type: DataTypes.INTEGER,
-            primarykey: true,
-            autoincrement: true,
+            primaryKey: true,
+            autoIncrement: true,
             allowNull: false
         },
         exercise_id: {
@@ -20,8 +20,7 @@ UserExercises.init(
             }
         },
         login_email: {
-            type: DataTypes.INTEGER,
-            unique: true,
+            type: DataTypes.STRING,
             isEmail: true,
             references: {
                 model: 'login',

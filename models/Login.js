@@ -7,7 +7,8 @@ Login.init(
     {
         id : {
         type: DataTypes.INTEGER,
-        autoincrement: true,
+        autoIncrement: true,
+        primaryKey: true,
         allowNull: false,
         },
         first_name: {
@@ -28,7 +29,7 @@ Login.init(
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            primarykey: true,
+            primaryKey: true,
             isEmail: true
         },
         password: {
@@ -41,7 +42,8 @@ Login.init(
     },
     {
         sequelize,
-        model: 'login'
+        freezeTableName: true,
+        modelName: 'login',
     }
 );
 

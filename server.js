@@ -45,5 +45,5 @@ app.use(routes);
 // sync sequelize models to the database, then turn on the server.
 sequelize.sync({ force: false }).then(() => {
   // Starts the server to begin listening
-  app.listen(PORT, () => console.log('App listening at http://localhost:${PORT} 🚀'));
+  app.listen(PORT, () => console.log(`App listening on port ${PORT} 🚀 \n visit: http://localhost:${PORT}`));
 });

@@ -1,11 +1,15 @@
 const router = require('express').Router();
-// const apiRoutes = require('./api');
 const homeRoutes = require('./home-routes');
-// const userRoutes = require('./user-routes');
+// const apiRoutes = require('./api');  // use for getting the exercise data
+// const userRoutes = require('./userRoutes');
+
+
+
 
 router.use('/', homeRoutes);
-// router.use('/api', apiRoutes);
 // router.use('/users', userRoutes);
+// router.use('/api', apiRoutes);
+
 
 
 

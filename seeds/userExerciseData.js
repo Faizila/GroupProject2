@@ -43,6 +43,6 @@ const userexercisesdata = [
     },
 ]
 
-const seedUserExercises = () => UserExercises.bulkcreate(userexercisesdata);
+const seedUserExercises = () => UserExercises.bulkCreate(userexercisesdata);
 
 module.exports = seedUserExercises;

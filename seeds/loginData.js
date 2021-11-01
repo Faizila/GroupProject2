@@ -33,6 +33,6 @@ const logindata = [
     },
 ]
 
-const seedLogin = () => Login.bulkcreate(logindata)
+const seedLogin = () => Login.bulkCreate(logindata)
 
 module.exports = seedLogin;

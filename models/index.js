@@ -10,11 +10,11 @@ UserExercises.belongsTo(Login, {
   foreignKey: 'login_email',
 });
 
-UserExercises.hasMany(Exercises, {
+Exercises.hasMany(UserExercises, {
     foreignKey: 'exercise_id',
   });
   
-Exercises.belongsTo(UserExercises, {
+UserExercises.belongsTo(Exercises, {
     foreignKey: 'exercise_id',
   });
 

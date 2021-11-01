@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
 
+const Exercises = require('../models/Exercises')
+const UserExercises = require('../models/UserExercises')
+
+
 //homepage -- if they authenticated they will be forwarded to the dashboard
 router.get('/', (req, res) => {
     try {

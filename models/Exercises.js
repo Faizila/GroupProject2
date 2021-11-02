@@ -22,7 +22,11 @@ Exercises.init(
         img_end: {
             type: DataTypes.STRING,
             allowNull: false,
-        }
+        },
+        exercise_type: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,

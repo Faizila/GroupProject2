@@ -13,6 +13,8 @@ const seedAll = async () => {
     await seedUserExercises();
     console.log('This is NUMBER 4')
 
+    console.log('<-- all seeds planted-->');
+
     process.exit(0);
 };
 

@@ -29,48 +29,7 @@ router.get('/', (req, res) => {
 //   });
   
 
-// router.get('/exercises', ensureAuthenticated, async (req, res) => {
-//     try {
-     
-      
-//       res.render('exercises'); 
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
-  
-// router.get('/ex-ball', ensureAuthenticated, async (req, res) => {
-//     try {
-     
-      
-//       res.render('ex-ball'); 
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
-  
-// router.get('/ex-stretch', ensureAuthenticated, async (req, res) => {
-//     try {
-     
-      
-//       res.render('ex-stretch'); 
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
-  
-// router.get('/ex-band', ensureAuthenticated, async (req, res) => {
-//     try {
-     
-      
-//       res.render('ex-band'); 
-//     } catch (err) {
-//       res.status(500).json(err);
-//     }
-//   });
   
 
-
-
-
+// export
   module.exports = router;

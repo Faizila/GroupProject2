@@ -7,7 +7,7 @@ const userRoutes = require('./userRoutes');
 
 router.use('/', homeRoutes);
 router.use('/exercise', exerciseRoutes);
-// router.use('/users', userRoutes);
+router.use('/users', userRoutes);
 // router.use('/api', apiRoutes);
 
 // export

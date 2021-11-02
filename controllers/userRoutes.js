@@ -7,18 +7,25 @@ const Login = require('../models/Login')
 // login post route
 router.post('/login', async (req, res) => {
   try {
-    const userData = await Login.findOne({ where: {email: req.body.email } });
+    console.log("======================================================================================================================")
+    const loginData = await Login.findOne({ where: {email: req.body.email } });
+    console.log("======================================================================================================================")
 
 
-    if (!userData) {
+    if (!loginData) {
       res.status(400)
       res.json({message: "Your password or email is not correct."});
       return;
     }
+console.log(loginData)
+console.log(req.body.password)
+console.log(req.body.password)
+console.log(req.body.password)
+console.log(req.body.password)
+console.log(req.body.password)
+    const validatePassword = await loginData.checkPassword(req.body.password);
 
-    const validatePassword = await userData.checkPw(req.body.password);
-
- 
+  
 
     if (!validatePassword) {
       res.status(400)
@@ -29,8 +36,8 @@ router.post('/login', async (req, res) => {
   
      
     req.session.save(() => {
-      req.session.user_id = userData.id
-      req.session.email = userData.email;
+      req.session.user_id = loginData.id
+      req.session.email = loginData.email;
       req.session.logged_in = true;
 
    console.log("======================================================================================================================")

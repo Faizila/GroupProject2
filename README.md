@@ -16,15 +16,33 @@ https://floating-basin-17034.herokuapp.com/
 
 # Table of Contents
 
+* Technologies
 * Built With
 * Installation
 * Usage
 * License
-* Link
 * Screenshots
 * Testing
 * Questions
 * References
+
+# Technologies
+
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
+* Node.js
+* Express.js
+* Handlebars.js
+* Sequelize ORM
+* MySQL
+* Heroku
+* Insomnia
+* Google Fonts
+* Popper.js
+* Font Awesome
+* Box Icons
 
 # Built With
 
@@ -108,6 +126,8 @@ If you have any other questions or comments you can contact me at:
 # References
 
 Rice University class activities
+<br>
+Google Images
 <br>
 https://bootstrapmade.com/
 <br>

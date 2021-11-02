@@ -1,5 +1,9 @@
 # GroupProject2
 
+# Heroku Link
+
+https://floating-basin-17034.herokuapp.com/
+
 # Members
 
 * Christopher Noriega
@@ -18,6 +22,7 @@
 * License
 * Link
 * Screenshots
+* Testing
 * Questions
 * References
 
@@ -88,12 +93,11 @@ npm start
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Link
-
-https://floating-basin-17034.herokuapp.com/
-
 # Screenshots
 
+# Testing
+
+* Uses the [Insomnia](https://insomnia.rest/download) to test the code.
 
 # Questions
 

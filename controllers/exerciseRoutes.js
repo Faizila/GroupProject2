@@ -25,10 +25,14 @@ router.post('/ball', async (req, res) => {
         const exerciseData = await Exercises.findAll({
             where: { exercise_type: req.body.exercise_type },
             });
-     
+
+        const exercises = exerciseData.map(e => e.get({ plain: true }));
+        
         // success
         // ball.handlebars
-        res.render('ball'); 
+        res.render('ball', { exercises, loggedIn: req.session.loggedIn })
+  
+        console.log(exercises)
         // error
         } catch (err) {
         res.status(500).json(err);
@@ -43,10 +47,14 @@ router.post('/stretch', async (req, res) => {
         const exerciseData = await Exercises.findAll({
             where: { exercise_type: req.body.exercise_type },
             });
-     
-        // success
-        // stretch.handlebars
-        res.render('stretch'); 
+
+            const exercises = exerciseData.map(e => e.get({ plain: true }));
+        
+            // success
+            // stretch.handlebars
+            res.render('stretch', { exercises, loggedIn: req.session.loggedIn })
+      
+            console.log(exercises)
         // error
         } catch (err) {
         res.status(500).json(err);
@@ -60,10 +68,14 @@ router.post('/band', async (req, res) => {
             const exerciseData = await Exercises.findAll({
                 where: { exercise_type: req.body.exercise_type },
                 });
-         
-            // success
-            // band.handlebars
-            res.render('band'); 
+
+                const exercises = exerciseData.map(e => e.get({ plain: true }));
+        
+                // success
+                // band.handlebars
+                res.render('band', { exercises, loggedIn: req.session.loggedIn })
+          
+                console.log(exercises)
             // error
             } catch (err) {
             res.status(500).json(err);

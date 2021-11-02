@@ -104,6 +104,8 @@ If you have any other questions or comments you can contact me at:
 # References
 
 Rice University class activities
+<br>
 https://bootstrapmade.com/
+<br>
 https://bootsnipp.com/search?q=login+modal
 

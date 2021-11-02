@@ -9,6 +9,8 @@ const seedAll = async () => {
     await seedLogin();
     await seedUserExercises();
 
+    console.log('<-- all seeds planted-->');
+
     process.exit(0);
 };
 

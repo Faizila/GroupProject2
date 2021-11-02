@@ -1,6 +1,6 @@
 // import
 const router = require('express').Router();
-const { Exercises, Login, UserExercises } = require('../models');
+const { Exercises } = require('../models');
 // Authentication
 
 // '/exercise' endpoint
@@ -8,7 +8,7 @@ const { Exercises, Login, UserExercises } = require('../models');
 // GET all 3 categories 
 router.get('/', (req, res) => {
     try {
-     
+            console.log('=====================================exercises============================')
     // success
     // exercises.handlebars
       res.render('exercises'); 
@@ -18,16 +18,16 @@ router.get('/', (req, res) => {
     }
   });
   
-// POST exercise/ball
-router.post('/ball', async (req, res) => {
+// GET exercise/ball
+router.get('/ball', async (req, res) => {
     try {
         // find all exercises .findAll
         const exerciseData = await Exercises.findAll({
-            where: { exercise_type: req.body.exercise_type },
+            where: { exercise_type: 'ball' },
             });
 
         const exercises = exerciseData.map(e => e.get({ plain: true }));
-        
+       
         // success
         // ball.handlebars
         res.render('ball', { exercises, loggedIn: req.session.loggedIn })
@@ -40,12 +40,12 @@ router.post('/ball', async (req, res) => {
     });
            
   
-// POST exercise/stretch
-router.post('/stretch', async (req, res) => {
+//  GET exercise/stretch
+router.get('/stretch', async (req, res) => {
     try {
         // find all exercises .findAll
         const exerciseData = await Exercises.findAll({
-            where: { exercise_type: req.body.exercise_type },
+            where: { exercise_type: 'stretch' },
             });
 
             const exercises = exerciseData.map(e => e.get({ plain: true }));
@@ -61,12 +61,12 @@ router.post('/stretch', async (req, res) => {
         }
     });
             
-// POST exercise/band 
-router.post('/band', async (req, res) => {
+// GET exercise/band 
+router.get('/band', async (req, res) => {
         try {
             // find all exercises .findAll
             const exerciseData = await Exercises.findAll({
-                where: { exercise_type: req.body.exercise_type },
+                where: { exercise_type: 'band' },
                 });
 
                 const exercises = exerciseData.map(e => e.get({ plain: true }));

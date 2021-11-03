@@ -1,5 +1,9 @@
 # GroupProject2
 
+# Heroku Link
+
+https://floating-basin-17034.herokuapp.com/
+
 # Members
 
 * Christopher Noriega
@@ -12,14 +16,33 @@
 
 # Table of Contents
 
+* Technologies
 * Built With
 * Installation
 * Usage
 * License
-* Link
 * Screenshots
+* Testing
 * Questions
 * References
+
+# Technologies
+
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
+* Node.js
+* Express.js
+* Handlebars.js
+* Sequelize ORM
+* MySQL
+* Heroku
+* Insomnia
+* Google Fonts
+* Popper.js
+* Font Awesome
+* Box Icons
 
 # Built With
 
@@ -88,12 +111,11 @@ npm start
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# Link
-
-https://floating-basin-17034.herokuapp.com/
-
 # Screenshots
 
+# Testing
+
+* Uses the [Insomnia](https://insomnia.rest/download) to test the code.
 
 # Questions
 
@@ -104,6 +126,8 @@ If you have any other questions or comments you can contact me at:
 # References
 
 Rice University class activities
+<br>
+Google Images
 <br>
 https://bootstrapmade.com/
 <br>

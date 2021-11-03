@@ -1,4 +1,5 @@
 const { Login } = require ('../models');
+const bcrypt = require('bcrypt');
 
 const logindata = [
     {
@@ -33,6 +34,10 @@ const logindata = [
     },
 ]
 
-const seedLogin = () => Login.bulkCreate(logindata)
+const seedLogin = () => Login.bulkCreate(logindata, {
+    individualHooks: true,
+    returning: true,
+})
+
 
 module.exports = seedLogin;

@@ -38,10 +38,12 @@ router.post('/login', async (req, res) => {
    
       
       res.render('dashboard', {
-        loggedIn: req.session.loggedIn,
-        loggedIn: req.body.loggedIn
+        loggedIn: req.session.logged_in,
+      
       })
     });
+
+    console.log(req.session)
 
 
 } catch (err){
@@ -107,9 +109,10 @@ router.post('/register', async  (req, res) => {
 
 
       req.session.save(() => {
-        req.session.user_id = regData.id
-        req.session.email = regData.email;
-        req.session.logged_in = true;
+        console.log
+        // req.session.user_id = regData.id
+        // req.session.email = regData.email;
+        // req.session.logged_in = true;
   
      
         

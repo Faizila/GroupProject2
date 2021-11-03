@@ -55,6 +55,7 @@ https://floating-basin-17034.herokuapp.com/
 * [express-session](https://www.npmjs.com/package/express-session)  
 * [handlebars](https://www.npmjs.com/package/handlebars)
 * [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
+* [popperjs](https://www.npmjs.com/package/@popperjs/core)
 
 # Installation
 
@@ -99,6 +100,11 @@ npm i handlebars
 ```bash
 npm install connect-session-sequelize
 ```
+
+```bash
+npm i @popperjs/core
+```
+
 # Usage
 
 The application will be invoked by using the following command:

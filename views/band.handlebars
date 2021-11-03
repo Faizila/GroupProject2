@@ -1,17 +1,17 @@
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">band</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/exercise/band" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+<section id="exercises" class="exercises">
+      <div class="container">
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">band</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="/exercise/band" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+        <div class="section-title">
+          <h1>Band Exercises</h1>
+    
+          {{#each exercises as |exercise|}}
+            {{> band-details exercise}}
+            {{/each}}  
+
+        </div>
+
+      </div>
+    </section>
+    <section>
+             <button type="button" class="btn btn-info" id="addtoList">Add to My List</button>
+    </section>

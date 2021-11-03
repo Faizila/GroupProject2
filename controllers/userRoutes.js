@@ -7,9 +7,9 @@ const Login = require('../models/Login')
 // login post route
 router.post('/login', async (req, res) => {
   try {
-    console.log("======================================================================================================================")
+    
     const loginData = await Login.findOne({ where: {email: req.body.email } });
-    console.log("======================================================================================================================")
+    
 
 
     if (!loginData) {
@@ -17,19 +17,14 @@ router.post('/login', async (req, res) => {
       res.json({message: "Your password or email is not correct."});
       return;
     }
-console.log(loginData)
-console.log(req.body.password)
-console.log(req.body.password)
-console.log(req.body.password)
-console.log(req.body.password)
-console.log(req.body.password)
+
     const validatePassword = await loginData.checkPassword(req.body.password);
 
   
 
     if (!validatePassword) {
       res.status(400)
-      res.json({message: "234234234234234234234234234234our password or email is not correct."});
+      res.json({message: "Your password or email is not correct."});
       return;
     }
 
@@ -40,9 +35,7 @@ console.log(req.body.password)
       req.session.email = loginData.email;
       req.session.logged_in = true;
 
-   console.log("======================================================================================================================")
-    console.log(req.session)
-    console.log("======================================================================================================================")
+   
       
       res.render('dashboard', {
         loggedIn: req.session.loggedIn,
@@ -59,14 +52,68 @@ console.log(req.body.password)
 
 //registartion post route
 
-// router.post('/register', async  (req, res) => {
-//     try {
-     
-//     } catch (err) {
-//         res.status(500).json(err);
-//       }
-//     });
+router.post('/register', async  (req, res) => {
+  
+  const { first_name, last_name, email, password, password2 } = req.body
+  try {
+ 
 
+    // let regData =  await Login.findOne({ email: email });
+   
+
+    let errors = [];
+
+    if (!first_name || !last_name || !email || !password || !password2) {
+      
+      errors.push({ message: 'you for got to fill in one of the fields.' });
+    }
+
+
+      if (password !== password2) {
+        errors.push({ msg: 'Make sure the passwords match' });
+      }
+
+      if (password.length < 8) {
+        errors.push({ msg: 'password should be a minimum of 8 characters' });
+      } 
+
+
+      if(errors.length > 0) {
+        console.log(errors)
+        res.json(errors)
+
+      }else{
+        
+        //user exists 
+        
+       regData = await Login.findOne({ where:{ email: email} })
+
+      
+       
+       if(regData){
+         errors.push({msg: "That email had already been registered, please login!"})
+         res.json(errors)
+       } else {
+        
+        const newLogin = await  Login.create({
+          first_name: first_name,
+          last_name: last_name,
+          email: email,
+          password: password       
+        });
+       }    
+      }
+
+      res.render('dashboard', {
+        loggedIn: req.session.loggedIn,
+        loggedIn: req.body.loggedIn
+      })
+      
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 

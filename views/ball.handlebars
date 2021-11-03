@@ -1,26 +1,12 @@
-    <section id="exercises" class="exercises">
+<section id="exercises" class="exercises">
       <div class="container">
 
         <div class="section-title">
           
-          <h1>Ball Exercises</h1>
-   
-         </div>
-
-        <div class="row">
-          <p>Start Image</p>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up">
-          <div class="icon-box">
-          <img src="startball.jpg" alt="start image">
-          </div>
-          </div>
-
-          <p>End Image</p>
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="fade-up" data-aos-delay="150">
-            <div class="icon-box">
-            <img src="endball.jpg" alt="end image">
-            </div>
-          </div>      
+    
+          {{#each exercises as |exercise|}}
+            {{> ball-details exercise}}
+            {{/each}}  
 
         </div>
 

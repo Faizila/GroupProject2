@@ -279,6 +279,15 @@ color: #e1e9eb;
     padding: 0.3rem 0rem;
   }
 
+  /* Member signup */
+
+  body { 
+    padding-top:30px;
+   }
+.form-control {
+   margin-bottom: 10px; 
+  }
+
   /* Exercises */
 
   .exercises .icon-box {

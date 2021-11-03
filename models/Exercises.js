@@ -27,6 +27,14 @@ Exercises.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        starting_tip: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        ending_tip: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
     },
     {
         sequelize,

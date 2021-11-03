@@ -38,10 +38,12 @@ router.post('/login', async (req, res) => {
    
       
       res.render('dashboard', {
-        loggedIn: req.session.loggedIn,
-        loggedIn: req.body.loggedIn
+        loggedIn: req.session.logged_in,
+      
       })
     });
+
+    console.log(req.session)
 
 
 } catch (err){
@@ -53,6 +55,7 @@ router.post('/login', async (req, res) => {
 //registartion post route
 
 router.post('/register', async  (req, res) => {
+  console.log(req.body)
   
   const { first_name, last_name, email, password, password2 } = req.body
   try {
@@ -104,16 +107,31 @@ router.post('/register', async  (req, res) => {
        }    
       }
 
-      res.render('dashboard', {
-        loggedIn: req.session.loggedIn,
-        loggedIn: req.body.loggedIn
-      })
+
+      req.session.save(() => {
+        console.log
+        // req.session.user_id = regData.id
+        // req.session.email = regData.email;
+        // req.session.logged_in = true;
+  
+     
+        
+        res.render('dashboard', {
+          loggedIn: req.session.loggedIn,
+          loggedIn: req.body.loggedIn
+        })
+      });
+
+
+      console.log(req.session)
+      console.log(req.body)
       
 
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 
 

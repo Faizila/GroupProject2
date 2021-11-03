@@ -53,7 +53,7 @@
       <nav id="navbar" class="navbar">
       
          
-{{#if logged_in}}
+{{#if loggedIn}}
            <ul>
           <li><a class="nav-link scrollto active" href="/dashboard">Home</a></li>
           <li><a class="nav-link scrollto " href="/exercise">Exercises</a></li>
@@ -79,7 +79,7 @@
             </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           {{!-- logout --}}
-          <li><a class="nav-link" id="logout">Logout</a></li>
+          <li><a href="/users/logout" class="nav-link" id="logout">Logout</a></li>
         </ul>
          
       {{!-- <button type="button" class="btn btn-info btn-round"  id="logout">Logout</button>  

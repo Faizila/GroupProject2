@@ -1,28 +1,38 @@
 const router = require('express').Router();
-const { ensureAuthenticated, forwardAuthenticated } = require('../config/auth');
-const { UserExercises } = require('../../models');
+const { UserExercises, Exercises } = require('../../models');
 const session = require('express-session');
 
 // add to user's list
-router.post('/add', async (req, res) => {
+router.post('/add/:id', async (req, res) => {
+    console.log(req.params);
+    console.log(req.session.email);
+
     try {
         // console.log(req.session)
         // find all exercises .findAll
-        // "exercise_id": "4",
-// "login_email": "req.sesson" 
-// const test = req.body + "login_email" + ' + session.login.email
-        const addEx = await UserExercises.create(test);
-          
-
-        console.log("=========================================================================================")
-
+        //         // "exercise_id": "4",
+        // // "login_email": "req.sesson" 
+        // // const test = req.body + "login_email" + ' + session.login.email
+        const addEx = await UserExercises.create({
+            exercise_id: parseInt(req.params.id),
+            login_email: req.session.email
+        },{
+         include: [{
+            model: Exercises,
+            attributes: ['exercise_name','img_start','img_end','starting_tip', 'ending_tip']
+        }]   
+        }
         
-        const myExercises =  test.map(e => e.get({ plain: true }));
-console.log(myExercises)
-        // success
-        // stretch.handlebars
-        res.render('mylist', {myExercises, loggedIn: req.session.loggedIn})
+        );
 
+
+        console.log("======++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++===================================================================================")
+
+
+        const myExercises = addEx.map(e => e.get({ plain: true }));
+        console.log(myExercises)
+        res.json("hi")
+        
 
         // error
     } catch (err) {

@@ -119,6 +119,10 @@ npm start
 
 # Screenshots
 
+![QR_code](https://user-images.githubusercontent.com/78191579/140362169-9c5d5761-8125-4a24-b3c1-96b425f3b160.png)
+![homepage](https://user-images.githubusercontent.com/78191579/140362227-87b65181-79fb-438e-babb-d74d36c0d116.JPG)
+![footer](https://user-images.githubusercontent.com/78191579/140362259-bb9a7ad8-04d3-404f-98a3-8fb8a2aae60a.JPG)
+
 # Testing
 
 * Uses the [Insomnia](https://insomnia.rest/download) to test the code.

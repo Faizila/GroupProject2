@@ -15,6 +15,10 @@ Exercises.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        exercise_path: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         img_start: {
             type: DataTypes.STRING,
             allowNull: false,

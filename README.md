@@ -136,6 +136,8 @@ npm start
 
 # Videos
 
+https://github.com/Faizila/GroupProject2/blob/main/public/images/SpineX.gif
+
 # Testing
 
 * Uses the [Insomnia](https://insomnia.rest/download) to test the code.

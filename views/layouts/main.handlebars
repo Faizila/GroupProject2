@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- links -->
+    {{!-- links  --}}
 
-<!-- Bootstrapp -->
+{{!-- Bootstrap --}}
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/css/bootstrap.min.css'>
-<!-- Font Awesome-->
+ {{!-- Font Awesome --}}
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
-<!-- Box Icons -->
+ {{!-- Box Icons  --}}
 <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
-<!-- Google fonts -->
+ {{!-- Google fonts --}}
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-<!-- CSS -->
+ {{!-- CSS --}}
 <link rel="stylesheet" href="/css/style.css"/>
 
-<!-- title -->
-    <title>XYZ</title>
+{{!-- title  --}}
+    <title>SpineX</title>
 <!-- icon -->
-<link rel="icon" href="./assets/images/spine.png" type="image/png">
+<link rel="icon" href="/images/spine.png" type="image/png">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
 </head>
 <body>
@@ -44,14 +44,15 @@
   </section>
 {{!-- end section --}}
 
-<!-- Header -->
+ {{!-- Header  --}}
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo">XYZ</h1>
+      <h1 class="logo">SpineX</h1>
       
-   <!-- Nav -->
+   {{!-- Nav --}}
       <nav id="navbar" class="navbar">
-      
+
+      {{!-- Only if logged in --}}
          
 {{#if loggedIn}}
            <ul>
@@ -78,12 +79,10 @@
             </ul>
             </li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          {{!-- logout --}}
+          {{!-- logout button --}}
           <li><a href="/users/logout" class="nav-link" id="logout">Logout</a></li>
         </ul>
-         
-      {{!-- <button type="button" class="btn btn-info btn-round"  id="logout">Logout</button>  
-    </div> --}}
+
 {{else}}
 <ul>
 <li><a class="nav-link scrollto active" href="/">Home</a></li>
@@ -145,8 +144,6 @@
   {{/if}}
 
 {{!-- links --}}
-
-{{!-- jQuery --}}
 
 {{!-- Popper JS --}}
 <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>

@@ -10,9 +10,20 @@ https://floating-basin-17034.herokuapp.com/
 * Faizila Amlani
 * John Coakley
 
+# Powerpoint Presentation Link
+
+https://docs.google.com/presentation/d/1DUCBjjOIe4yf2fnxCC23JZO3H7Ldp44Q/edit?usp=sharing&ouid=110846898095699650282&rtpof=true&sd=true
+
+![ppt](https://user-images.githubusercontent.com/78191579/140420588-43ffb969-5098-4878-9473-8eea9f5af3ab.JPG)
+
 # Description
 
 
+# User Story
+
+* User can sign up for an account or login if they already have an account to view all exercises.
+* User can only view a full list of different exercises only if they are logged in.
+* User can add exercises to their personalized “my exercise list” page.
 
 # Table of Contents
 
@@ -20,8 +31,8 @@ https://floating-basin-17034.herokuapp.com/
 * Built With
 * Installation
 * Usage
-* License
 * Screenshots
+* videos
 * Testing
 * Questions
 * References
@@ -113,25 +124,33 @@ The application will be invoked by using the following command:
 npm start
 ```
 
-# License
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 # Screenshots
 
 ![QR_code](https://user-images.githubusercontent.com/78191579/140362169-9c5d5761-8125-4a24-b3c1-96b425f3b160.png)
-![homepage](https://user-images.githubusercontent.com/78191579/140362227-87b65181-79fb-438e-babb-d74d36c0d116.JPG)
-![footer](https://user-images.githubusercontent.com/78191579/140362259-bb9a7ad8-04d3-404f-98a3-8fb8a2aae60a.JPG)
+![homepage](https://user-images.githubusercontent.com/78191579/140420536-33ebffd9-f2bc-4fd1-b4e0-3da8538d07f3.JPG)
+![login](https://user-images.githubusercontent.com/78191579/140420551-8ea5d974-2ca4-4e4a-9950-8a211c5647c9.JPG)
+![signup](https://user-images.githubusercontent.com/78191579/140420554-361e975f-ae3b-410c-81db-695f3fb6add7.JPG)
+![dashboard](https://user-images.githubusercontent.com/78191579/140420610-f8281414-39ef-412f-8de0-283e358fc715.JPG)
+![exercises](https://user-images.githubusercontent.com/78191579/140420572-0b7e864b-a43f-412d-a53c-254409bcda36.JPG)
+![footer](https://user-images.githubusercontent.com/78191579/140420579-46203950-d66c-4d7f-9777-df99b8c0924c.JPG)
+
+# Videos
 
 # Testing
 
 * Uses the [Insomnia](https://insomnia.rest/download) to test the code.
 
+![insomnia](https://user-images.githubusercontent.com/78191579/140422149-d23c1d6b-d23f-457d-b9ac-5e32cf38fc44.JPG)
+
 # Questions
 
-If you have any other questions or comments you can contact me at:
+If you have any other questions or comments you can contact us at:
    <br>
-   My GitHub: https://github.com/Faizila
+  Chris: https://github.com/chris-noriega14
+  <br>
+  Faizila: https://github.com/Faizila
+  <br>
+  John: https://github.com/ESThing64
 
 # References
 
@@ -151,6 +170,4 @@ https://bootsnipp.com/search?q=login+modal
 
 
 
-345gerdfgkerop'gkerl;'gkjkaero;l'gjerop'[gjaer'pgjv
-ergergvergvbearfvbjhelrkger
-ergaeio;rjgl;erkjgklerjg]
+

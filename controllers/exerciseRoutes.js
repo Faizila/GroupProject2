@@ -82,5 +82,27 @@ router.get('/band', async (req, res) => {
             }
         });
 
+        router.get('/list', async (req, res) => {
+            try {
+                // console.log(req.session)
+                // find all exercises .findAll
+                const listData = await UserExercises.findAll();
+        
+                    confirm.log("=========================================================================================")
+        
+                    console.log(listData)        
+                    // const exercises = exerciseData.map(e => e.get({ plain: true }));
+                
+                    // success
+                    // stretch.handlebars
+                    res.json('hi')
+              
+                   
+                // error
+                } catch (err) {
+                res.status(500).json(err);
+                }
+            });
+
 // export
 module.exports = router;

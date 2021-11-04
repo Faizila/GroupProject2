@@ -112,7 +112,7 @@ router.post('/register', async  (req, res) => {
         console.log
         // req.session.user_id = regData.id
         // req.session.email = regData.email;
-        // req.session.logged_in = true;
+        req.session.logged_in = true;
   
      
         

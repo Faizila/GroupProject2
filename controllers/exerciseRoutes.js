@@ -89,7 +89,7 @@ router.get('/list', async (req, res) => {
         const test = await UserExercises.findAll({ where: {login_email: req.session.email },
             include: [{
                 model: Exercises,
-                attributes: ['exercise_name','img_start','img_end','starting_tip', 'ending_tip', "exercise_type"]
+                attributes: ['exercise_name','img_start','img_end','starting_tip', 'ending_tip', 'exercise_type', 'exercise_path']
             }]
          });
 

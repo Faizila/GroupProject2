@@ -10,12 +10,16 @@ router.post('/login', async (req, res) => {
     
     const loginData = await Login.findOne({ where: {email: req.body.email } });
     
-
+let error_type={};
 
     if (!loginData) {
-      res.status(400)
-      res.json({message: "Your password or email is not correct."});
-      return;
+error_type =  {error: "Your password or email is not correct."}
+//return error_type;
+      // return {
+      //   message: 'The email you entered is incorrect'}
+      return res.render("homepage", {error: "Your password or email is not correct."});
+      // res.status(400)
+      // res.send({message: "Your password or email is not correct."});
     }
 
     const validatePassword = await loginData.checkPassword(req.body.password);
@@ -23,10 +27,12 @@ router.post('/login', async (req, res) => {
   
 
     if (!validatePassword) {
-      res.status(400)
-      res.json({message: "Your password or email is not correct."});
-      return;
-    }
+      error_type = {error :"Your password or email is not correct."}
+      return res.render("homepage", {error :"Your password or email is not correct."});
+    //   res.status(400)
+    //   res.render({message: "Your password or email is not correct."});
+    //   return;
+   }
 
   
      
@@ -39,6 +45,7 @@ router.post('/login', async (req, res) => {
       
       res.render('dashboard', {
         loggedIn: req.session.logged_in,
+        error_type
       
       })
     });
@@ -116,7 +123,7 @@ router.post('/register', async  (req, res) => {
         console.log
         // req.session.user_id = regData.id
         // req.session.email = regData.email;
-        req.session.logged_in = true;
+        // req.session.logged_in = true;
   
      
         

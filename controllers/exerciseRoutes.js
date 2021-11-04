@@ -45,7 +45,7 @@ router.get('/stretch', async (req, res) => {
     try {
         // find all exercises .findAll
         const exerciseData = await Exercises.findAll({
-            where: { exercise_type: 'stretch' },
+            where: { exercise_type: 'stretches' },
         });
 
         const exercises = exerciseData.map(e => e.get({ plain: true }));
@@ -89,7 +89,7 @@ router.get('/list', async (req, res) => {
         const test = await UserExercises.findAll({ where: {login_email: req.session.email },
             include: [{
                 model: Exercises,
-                attributes: ['exercise_name','img_start','img_end','starting_tip', 'ending_tip']
+                attributes: ['exercise_name','img_start','img_end','starting_tip', 'ending_tip', "exercise_type"]
             }]
          });
 

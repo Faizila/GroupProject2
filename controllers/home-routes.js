@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
+const forwardAuth = require('../utils/auth');
 const Login = require('../models/Login')
 
 
@@ -20,12 +21,14 @@ router.get('/', (req, res) => {
 
 
 //if the user is noth suthenticated they will be forwarded to login// on the dashboard the user can see their list of exercises.
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', withAuth,  async (req, res) => {
     try {
-
-     
       
-      res.render('dashboard'); 
+        res.render('dashboard', {
+          loggedIn: req.session.logged_in,
+        
+        })
+      
     } catch (err) {
       res.status(500).json(err);
     }

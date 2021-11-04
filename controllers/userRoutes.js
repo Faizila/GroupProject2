@@ -141,9 +141,21 @@ router.post('/register', async  (req, res) => {
 
 
 // logout request.
-    router.get('/logout', (req, res) => {
-        req.logout();
-        res.redirect('/users/login');
+    router.get('/logout',  (req, res) => {
+      if (req.session.logged_in) {
+        // Remove the session variables
+        req.session.destroy(() => {
+          res.status(204).end();
+          
+        });
+
+        res.redirect('/');
+    
+
+        // res.render('/login')
+      } else {
+        res.status(404).end();
+      }
       });
       
     

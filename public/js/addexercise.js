@@ -7,9 +7,7 @@ $(document).ready(function(){
 
        const response = await fetch('/api/add/'+id, {
         method: 'POST',
-        
-        // body: JSON.stringify({ email, password }),
-        // headers: { 'Content-Type': 'application/json' },
+
       });
       
 

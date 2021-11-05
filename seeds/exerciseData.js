@@ -294,7 +294,7 @@ const exercisedata = [
      },
      
      {
-       exercise_name: 'Hip_Flexion',
+       exercise_name: 'Hip Flexion',
        exercise_path: 'hip_flexion',
        img_start: 'resized_500x666_Hip_Flexion_Start.jpg',
        img_end: 'resized_500x666_Hip_Flexion_End.jpg',

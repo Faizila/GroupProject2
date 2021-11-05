@@ -20,7 +20,7 @@ const exercisedata = [
        ending_tip: 'def',
      },
     {
-       exercise_name: 'opposite_arm-leg',
+       exercise_name: 'Opposite Arm-Leg',
        exercise_path: 'opposite_arm-leg',
        img_start: 'resized_480x360_opp_arm_start.jpg',
        img_end: 'resized_480x360_opp_arm_end.jpg',
@@ -56,13 +56,67 @@ const exercisedata = [
        ending_tip: 'erererr',
      },
      {
+      exercise_name: 'Prone Extension',
+      exercise_path: 'prone_extension',
+      img_start: 'resized_500x375_Prone_Extension_Start.jpg',
+      img_end: 'resized_500x375_Prone_Extension_End.jpg',
+      exercise_type: 'stretches',
+      starting_tip: 'dfdfdfd',
+      ending_tip: 'erererr',
+     },
+     {
        exercise_name: 'Retraction',
        exercise_path: 'retraction',
        img_start: 'resized_300x334_retraction_1.jpg',
        img_end: 'resized_300x341_retraction_2.jpg',
-       exercise_type: 'stretch',
+       exercise_type: 'stretches',
        starting_tip: 'dfdfdfd',
        ending_tip: 'erererr',
+     },
+     {
+      exercise_name: 'Retraction Extension',
+      exercise_path: 'retraction_extension',
+      img_start: 'resized_300x341_ret_ext._1.jpg',
+      img_end: 'resized_300x315_ret_ext._2.jpg',
+      exercise_type: 'stretches',
+      starting_tip: 'dfdfdfd',
+      ending_tip: 'erererr',
+     },
+     {
+      exercise_name: 'Rotation Extension',
+      exercise_path: 'rotation extension',
+      img_start: 'resized_300x442_corner_1.jpg',
+      img_end: 'resized_300x442_corner_2.jpg',
+      exercise_type: 'stretches',
+      starting_tip: 'dfdfdfd',
+      ending_tip: 'erererr',
+     },
+     {
+      exercise_name: 'Rotation Flextion',
+      exercise_path: 'rotation_flextion',
+      img_start: 'resized_300x493_underarm_1.jpg',
+      img_end: 'resized_300x508_underarm_2.jpg',
+      exercise_type: 'stretches',
+      starting_tip: 'dfdfdfd',
+      ending_tip: 'erererr',
+     },
+     {
+      exercise_name: 'Slide Glide',
+      exercise_path: 'slide_glide',
+      img_start: 'resized_300x550_side_glide_1.jpg',
+      img_end: 'resized_300x597_side_glide_2.jpg',
+      exercise_type: 'stretches',
+      starting_tip: 'dfdfdfd',
+      ending_tip: 'erererr',
+     },
+     {
+      exercise_name: 'Standing Extension',
+      exercise_path: 'standing_extension',
+      img_start: 'resized_500x666_Standing-Extension-Start_1.jpg',
+      img_end: 'resized_500x666_Standing_Extension_End.jpg',
+      exercise_type: 'stretches',
+      starting_tip: 'dfdfdfd',
+      ending_tip: 'erererr',
      },
      {
        exercise_name: 'Ab Crunch',
@@ -101,7 +155,7 @@ const exercisedata = [
        ending_tip: 'erererr',
      },
      {
-       exercise_name: 'low trap row',
+       exercise_name: 'Low Trap Row',
        exercise_path: 'Low_trap_row',
        img_start: 'resized_500x375_Lower_Trap_Row_Start.jpg',
        img_end: 'resized_500x375_Lower_Trap_Row_End.jpg',
@@ -283,3 +337,4 @@ const exercisedata = [
 const seedExercise = () => Exercises.bulkCreate(exercisedata);
 
 module.exports = seedExercise;
+

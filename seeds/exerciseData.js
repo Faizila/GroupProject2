@@ -156,7 +156,7 @@ const exercisedata = [
      },
      {
        exercise_name: 'Low Trap Row',
-       exercise_path: 'Low_trap_row',
+       exercise_path: 'low_trap_row',
        img_start: 'resized_500x375_Lower_Trap_Row_Start.jpg',
        img_end: 'resized_500x375_Lower_Trap_Row_End.jpg',
        exercise_type: 'band',

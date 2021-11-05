@@ -18,6 +18,7 @@ https://docs.google.com/presentation/d/1DUCBjjOIe4yf2fnxCC23JZO3H7Ldp44Q/edit?us
 
 # Description
 
+SpineX is a web application for chiropractors to help their clients manage the exercises recommended for each individual. These exercises are broken down by three categories (Ball Exercises, Stretches, and Band Exercises).
 
 # User Story
 

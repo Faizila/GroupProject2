@@ -34,8 +34,12 @@ router.post('/add/:id', async (req, res) => {
 
 router.delete('/del/:id', async (req, res) => {
     try {
-        const deleteUserExercise = await UserExercises.destroyOne({
-            where: {id: parseInt(req.params.id)}
+
+        console.log(req.params.id)
+
+        console.log('HEYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY');
+        const deleteUserExercise = await UserExercises.destroy({
+            where: {id: req.params.id}
         })
 
         res.json(deleteUserExercise)
